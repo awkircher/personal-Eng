@@ -31,7 +31,7 @@
 
 @media (max-width: 785px) {
   .App {
-    grid-template-rows: repeat(auto-fill, 64px);
+    grid-template-rows: repeat(auto-fill,minmax(64px, auto));
     grid-template-columns: 1fr;
   }
   .leftContainer {
