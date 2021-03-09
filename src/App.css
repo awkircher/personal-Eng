@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@80,400;100,400;100,600;100,900;200,400&display=swap');
+
+.App {
+  font-family: 'Inconsolata','Courier New', Courier, monospace;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: repeat(auto-fill, 116px);
+  grid-gap: 0.5rem 1.85rem;
+  justify-items: center;
+  justify-content: center;
+  padding: 32px 48px;
+}
+
+@media (min-width: 930px) {
+  .leftContainer, .rightContainer {
+      grid-column: span 1;
+      grid-column-start: 1;
+  }
+}
+
+@media (min-width: 786px) and (max-width: 929px) {
+  .App {
+    grid-template-rows: repeat(auto-fill, 64px);
+  }
+  .leftContainer {
+      grid-column: span 3;
+      justify-self: left;
+  }
+}
+
+@media (max-width: 785px) {
+  .App {
+    grid-template-rows: repeat(auto-fill, 64px);
+    grid-template-columns: 1fr;
+  }
+  .leftContainer {
+      justify-self: left;
+  }
+}
+
+.contactLinks {
+  padding-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.leftContainer div:last-of-type {
+  font-size: 20px;
+}
+
+.years {
+  padding: 1.25rem 0;
+  font-weight: 600;
+}
+
+.contactLinks a {
+  padding-right: 0.5rem;
+  cursor: pointer;
+}
+
+.years div {
+  display: inline-block;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.years div:hover {
+  background-color: rgba(0,0,0,0.08);
+}
+
+[class="years 2021"] [data-year="2021"],
+[class="years 2020"] [data-year="2020"],
+[class="years 2019"] [data-year="2019"],
+[class="years 2018"] [data-year="2018"],
+[class="years 2017"] [data-year="2017"],
+[class="years 2016"] [data-year="2016"],
+[class="years 2015"] [data-year="2015"],
+[class="years 2014"] [data-year="2014"] {
+  background-color:rgba(233, 93, 32, 0.32);
+}
+
+.description div:first-of-type {
+  font-stretch: ultra-expanded;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+}
+
+.description div:nth-of-type(2) {
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+

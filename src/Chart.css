@@ -1,0 +1,128 @@
+@keyframes pulse {
+    0% {
+        opacity: 20%;
+    }
+    100% {
+        opacity: 40%;
+    }
+}
+
+#chart {
+    width: 100%;
+    align-self: flex-start;
+    justify-self: center;
+    max-width: 600px;
+}
+
+@media (min-width: 930px) {
+    #chart {
+        grid-column: span all;
+        grid-row-start: 1;
+        grid-column-start: 2;
+        overflow-x: hidden;
+    }
+}
+
+@media (min-width: 786px) and (max-width: 929px) {
+    #chart {
+        max-width: 450px;
+        overflow-x: hidden;
+    }
+    .legend {
+        display: none;
+    }
+}
+
+@media (min-width: 681px) and (max-width: 785px) {
+    #chart {
+        max-width: 375px;
+        overflow-x: hidden;
+        grid-row-start: 2;
+    }
+    .legend {
+        display: none;
+    }
+}
+
+@media (max-width: 680px) {
+    #chart {
+        max-width: 315px;
+        overflow-x: hidden;
+        grid-row-start: 2;
+    }
+    .legend {
+        display: none;
+    }
+}
+
+#barChart {
+    justify-self: left;
+}
+
+.legend {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+[data-name="HTML/CSS"] {
+    text-anchor: end;
+}
+
+[data-name="Javascript"] {
+    text-anchor: middle;
+}
+
+[data-name="Product Design"] {
+    text-anchor: start;
+}
+
+[data-name="Product Management"] {
+    text-anchor: start;
+}
+
+[data-name="Graphic Design"] {
+    text-anchor: end;
+}
+
+[class='2021'] [data-series="2021"],
+[class='2020'] [data-series="2020"],
+[class='2019'] [data-series="2019"],
+[class='2018'] [data-series="2018"],
+[class='2017'] [data-series="2017"],
+[class='2016'] [data-series="2016"],
+[class='2015'] [data-series="2015"],
+[class='2014'] [data-series="2014"] {
+    fill: #E95C20 !important;
+    fill-opacity: 1 !important;
+    animation: pulse 1s ease 0s infinite alternate-reverse;
+}
+
+[data-series="2021"],
+[data-series="2020"],
+[data-series="2019"],
+[data-series="2018"],
+[data-series="2017"],
+[data-series="2016"],
+[data-series="2015"],
+[data-series="2014"] {
+    cursor: pointer;
+} 
+
+.bar {
+    fill: #E95C20;
+    fill-opacity: .32;
+}
+
+[class='y axis'] {
+    font-size: 12px;
+    font-family: 'Inconsolata';
+    font-weight: 600;
+    text-transform: uppercase;
+    transform: translate(9px, -3px);
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    display: none;
+}
