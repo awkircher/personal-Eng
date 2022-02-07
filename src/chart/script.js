@@ -2,6 +2,13 @@ import { RadarChart } from './RadarChart.js'
 import { BarChart } from './BarChart.js'
 //Data
 var d = [
+	[ //2022
+		{axis:"Javascript",value:0.7},
+		{axis:"HTML/CSS",value:0.7},
+		{axis:"Graphic Design",value:0.0},
+		{axis:"Product Design",value:0.1},
+		{axis:"Product Mgmt",value:0.0},
+	],
 	[ //2021
 	  {axis:"Javascript",value:0.7},
 	  {axis:"HTML/CSS",value:0.7},

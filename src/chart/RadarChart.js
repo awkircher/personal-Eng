@@ -106,23 +106,25 @@ export var RadarChart = {
 					 .attr("data-series", function() {
 						 switch(series) {
 							 case 0:
-								 return "2021"
+								return "2022"
 							 case 1:
-								return "2020"
+								return "2021"
 							 case 2:
-								return "2019"
+								return "2020"
 							 case 3:
-								return "2018"
+								return "2019"
 							 case 4:
-								return "2017"
+								return "2018"
 							 case 5:
-								return "2016"
+								return "2017"
 							 case 6:
-								return "2015"
+								return "2016"
 							 case 7:
+								return "2015"
+							 case 8:
 								return "2014"
 							default:
-								return "2021"
+								return "2022"
 						 }
 					 })
 					 .attr("points",function(d) {

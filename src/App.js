@@ -5,6 +5,7 @@ import './App.css';
 
 function App() {
   const years = [
+    '2022',
     '2021',
     '2020',
     '2019',
@@ -16,10 +17,10 @@ function App() {
   ]
 
   const current = {
-    year: '2021',
-    role: 'Student',
-    company: 'The Odin Project',
-    text: 'Currently Ashley is completing a self-directed curriculum in frontend development through the Odin Project.',
+    year: '2022',
+    role: 'Frontend Engineer',
+    company: 'Vail Systems',
+    text: 'Support feature development and ongoing maintenance of Ruby on Rails application with React frontend.',
   }
 
   const [selection, setSelection] = useState(current);
@@ -27,8 +28,18 @@ function App() {
 
   const updateSelection = function(year) {
     switch(year) {
-      case '2021':
+      case '2022':
         setSelection(current)
+        break;
+      case '2021':
+        setSelection(
+          {
+            year: '2021',
+            role: 'Frontend Engineer',
+            company: 'Vail Systems',
+            text: 'Support feature development and ongoing maintenance of Ruby on Rails application with React frontend.'
+          }
+        )
         break;
       case '2020':
         setSelection(
