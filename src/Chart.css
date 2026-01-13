@@ -85,6 +85,7 @@
 }
 
 /* Refactor this to be a selected or current class */
+[class='2023-current'] [data-series="2023-current"],
 [class='2022'] [data-series="2022"],
 [class='2021'] [data-series="2021"],
 [class='2020'] [data-series="2020"],

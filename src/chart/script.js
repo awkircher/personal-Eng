@@ -2,6 +2,13 @@ import { RadarChart } from './RadarChart.js'
 import { BarChart } from './BarChart.js'
 //Data
 var d = [
+	[ //2023-current
+		{axis:"Javascript",value:0.7},
+		{axis:"HTML/CSS",value:0.7},
+		{axis:"Graphic Design",value:0.0},
+		{axis:"Product Design",value:0.3},
+		{axis:"Product Mgmt",value:0.0},
+	],
 	[ //2022
 		{axis:"Javascript",value:0.7},
 		{axis:"HTML/CSS",value:0.7},
@@ -61,7 +68,6 @@ var d = [
   ];
 
 export const makeRadarHappen = function(browserWidth) {
-	console.log('makeRadarHappen with width ' + browserWidth)
 	var w = browserWidth * .39,
 		h = browserWidth * .39;
 	

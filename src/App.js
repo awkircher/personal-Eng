@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react' 
 import { makeBarChartHappen, makeRadarHappen } from './chart/script'
+import * as RoleDescriptions from './RoleDescriptions'
 import "./Chart.css"
 import './App.css';
 
 function App() {
   const years = [
+    '2023-current',
     '2022',
     '2021',
     '2020',
@@ -16,100 +18,42 @@ function App() {
     '2014'
   ]
 
-  const current = {
-    year: '2022',
-    role: 'Frontend Engineer',
-    company: 'Vail Systems',
-    text: 'Support feature development and ongoing maintenance of Ruby on Rails application with React frontend.',
-  }
+  const current = RoleDescriptions.year_current
 
   const [selection, setSelection] = useState(current);
   const [width, setWidth] = useState(window.innerWidth);
 
   const updateSelection = function(year) {
     switch(year) {
-      case '2022':
+      case '2023-current':
         setSelection(current)
         break;
+      case '2022':
+        setSelection(RoleDescriptions.year_2022)
+        break;
       case '2021':
-        setSelection(
-          {
-            year: '2021',
-            role: 'Frontend Engineer',
-            company: 'Vail Systems',
-            text: 'Support feature development and ongoing maintenance of Ruby on Rails application with React frontend.'
-          }
-        )
+        setSelection(RoleDescriptions.year_2021)
         break;
       case '2020':
-        setSelection(
-          {
-            year: '2020',
-            role: 'UX Designer',
-            company: 'Vail Systems',
-            text: 'Led product design and UX for consumer-facing telecommunications API. Managed the professional development of new UX researcher.'
-          }
-        )
+        setSelection(RoleDescriptions.year_2020)
         break;
       case '2019':
-        setSelection(
-          {
-            year: '2019',
-            role: 'UX Designer',
-            company: 'Vail Systems',
-            text: 'Led the creation and management of a new product design internship, resulting in the successful hiring of graduate-level UX researcher and designer.'
-          }
-        )
+        setSelection(RoleDescriptions.year_2019)
         break;
       case '2018':
-        setSelection(
-          {
-            year: '2018',
-            role: 'UX Designer',
-            company: 'Vail Systems',
-            text: 'Work closely with product and engineering to design B2B telecommunications software.'
-          }
-        )
+        setSelection(RoleDescriptions.year_2018)
         break;
       case '2017':
-        setSelection(
-          {
-            year: '2017',
-            role: 'Cofounder',
-            company: 'Minda Labs',
-            text: 'Led product vision, business development, and product management for virtual reality-based learning platform. Worked closely with academics and researchers at Yale, Stanford, and Harvard to understand student needs and learning objectives, and translate into feature set. Prioritized tasks and managed technical implementation for on-time deployment. Successfully launched paid pilots to over 1,200 students during Fall 2018.'
-          }
-        )
+        setSelection(RoleDescriptions.year_2017)
         break;
       case '2016':
-        setSelection(
-          {
-            year: '2016',
-            role: 'Product Designer',
-            company: 'Enigma',
-            text: 'Worked on all design aspects of enterprise-level data management ecosystem. Defined team-wide UX principles. Led product research, user interviews, and user testing. Lead designer on relaunch of Enigma Public, redesigning onboarding and initial user flows resulting in a 200% increase in daily active users.'
-          }
-        )
+        setSelection(RoleDescriptions.year_2016)
         break;
       case '2015':
-        setSelection(
-          {
-            year: '2015',
-            role: 'Product Designer',
-            company: 'Chartbeat',
-            text: 'Collaborated on UX and visual design of our enterprise-level analytics tools and dashboards for editorial teams. Contributed to product research, user interviews, and user testing.'
-          }
-        )
+        setSelection(RoleDescriptions.year_2015)
         break;
       case '2014':
-        setSelection(
-          {
-            year: '2014',
-            role: 'Marketing Web Designer',
-            company: 'Chartbeat',
-            text: 'Redefined visual brand, maintained style guide, created illustrations for Twitter campaigns, collateral, and public-facing website. Redesigned and collaborated to build the public-facing website.'
-          }
-        )
+        setSelection(RoleDescriptions.year_2014)
         break;
       default:
         return null;
